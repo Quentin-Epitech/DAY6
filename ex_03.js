@@ -5,7 +5,6 @@ function addCarToAgent(agent, brand, model, color, power) {
      if (model && typeof model !== 'string') {
        console.error('Model incorrectly typed');
        return null; }
-      
     if (agent && typeof agent !== 'object') {
        console.error('Agent object incorrectly typed');
        return null;}
@@ -17,7 +16,6 @@ function addCarToAgent(agent, brand, model, color, power) {
        return null;}
      agent.car = {model: model,brand: brand, color: color, power: power};
    return agent;}
- 
  const agent = {
  firstname: 'James',lastname: 'Bond',age: 45,location: 'London' };
    
