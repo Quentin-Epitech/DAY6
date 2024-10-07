@@ -1,46 +1,80 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
     margin: 0;
-    padding: 20px;
-    transition: background-color 0.5s ease;}
-body:hover {
-    background-color: #e0e0e0;}
-h1 {color: #333;
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;}
-
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+h1 {
+color: #538ac1;
+margin-top: 20px;
+font-size: 36px;
+text-align: center;}
 #searchBar, #searchKey {
     padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #642a2a;
+    font-size: 16px;
+    margin: 10px;
     border-radius: 5px;
-    transition: border-color 0.3s ease;}
-
+    border: 1px solid #ccc;
+    outline: none;}
+#searchBar {width: 300px;}
+#searchKey {width: 150px;}
 #searchBar:focus, #searchKey:focus {
-    border-color: #949292;}
-
+    border-color: #538ac1;}
 #carList {
-    margin-top: 20px;}
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;}
 .car {
     background-color: #fff;
-    padding: 10px;
-    margin: 10px 0;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;}
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;}
 .car:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);}
-
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);}
 .car h2 {
     margin: 0;
-    color: #884343;
-    animation: slideIn 1s ease-in-out;}
-
-
+    color: #538ac1;
+    font-size: 24px;}
+.car p {
+    margin: 5px 0;
+    color: #555;}
+.photo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;}
+.photo img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;}
+.photo img:hover {
+    transform: scale(1.1);}
+@media (max-width: 600px) {
+    #searchBar, #searchKey {
+        width: 100%;}
+    .car {
+        width: 100%;
+        margin: 10px 0;}
+    .photo img {
+        width: 100%;
+        margin: 5px 0;}}
+.car-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;}
+ 
